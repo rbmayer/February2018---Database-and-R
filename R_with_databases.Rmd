@@ -1,8 +1,6 @@
 ---
 title: "How R Can Work with Databases!"
-output:
-  html_document:
-    df_print: paged
+output: md_document
 ---
 
 
@@ -139,7 +137,7 @@ wordcloud2(who, size=6)
 
 ### Add R data frame to SQL database as new table
 ```{r}
-topics <- read.csv('topics.csv', 
+topics <- read.csv('data/topics.csv', 
                    stringsAsFactors = FALSE)
 
 dbWriteTable(con, "topics", topics)
